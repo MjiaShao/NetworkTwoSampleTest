@@ -16,7 +16,7 @@ https://arxiv.org/pdf/2208.07573.pdf
 
 <h2>main file list </h2>
 
-1. 'main.m'
+1. 'Main.m'
 2. 'hashing_storage.m'
 3. 'pairwise_similarity_matrix.m'
 
