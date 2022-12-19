@@ -20,7 +20,7 @@ Input:
 1. data set: Save each network adjacency matrix as one file in a big folder. (In our example, we saved them in the 'data_simulation_100')
 2. MotifName: a motif list including all kinds of network moments you would like to make comparison 
 3. conf_level: alpha 
-4. cdelta: the parameter determines the variance of artificial noise term \delta_T
+4. cdelta: the parameter determines the variance of artificial noise term $\delta_T$
 
 Output:  
 1. Similarity matrix with pairwise comparison between networks in the data set
