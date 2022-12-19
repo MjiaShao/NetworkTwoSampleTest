@@ -1,5 +1,5 @@
 clear
-%% Loading two adjancency matrices (Symmetric and their diagonal value is 0)
+%% Loading two adjacency matrices (Symmetric and their diagonal values are 0)
 
 A1 = load("./data_simulation_100/A_1");
 A2 = load("./data_simulation_100/A_2");
@@ -9,9 +9,9 @@ A2 = A2.A;
 % set up a MotifName list 
 MotifName   = {'Triangle','Vshape'};
 
-%% Hashing step: to store a list of needed estimator of each matrix
+%% Hashing step: to store a list of needed estimator of each network
 %% input 
-% A1 is the adjancency matrix 
+% A1 is the adjancency matrix of one network
 % MotifName is the MotifName list 
 % Filenamesave: set up the file name, where you would like to save the hashing information
 
@@ -26,8 +26,8 @@ Our_method_NetHashing(A2, MotifName,filenamesave2);
 
 %% Testing step: to construct network two-sample test based on the hashing information
 %% input
-% filenamesave1: hashing information of A1
-% filenamesave1: hashing information of A2
+% filenamesave1: filename of file where store hashing information of A1
+% filenamesave2: filename of file where store hashing information of A2
 % conf_level: alpha
 % cdelta: the parameter determines the variance of artificial noise term \delta_T
 
