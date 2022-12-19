@@ -8,24 +8,26 @@ https://arxiv.org/pdf/2208.07573.pdf
 
 
 
-<h2>Function list </h2>
+<h2>Main files</h2>
 
 1. 'Our_method_NetHashing.m'
 2. 'Our_method_FastTest.m'
-3. 'Motif.m'
-
-<h2>main file list </h2>
-
-1. 'main.m'
-2. 'hashing_storage.m'
-3. 'pairwise_similarity_matrix.m'
 
 
-<h2>Instructions for making basic network two-sample test</h2>
-1. Run 'main.m' to construct network two-sample test between two networks 
+<h2>How to use (comparing K networks, K>=2)</h2>
 
-<h2>Instruction for making pairwise comparison after geting a list of network adjacency matrices</h2>
+Input: [Meijia, please fill this]
 
-1. The data example stored in the folder as 'coding/data_simulation_100' (including 100 different adjacency matrices)
-2. Run 'hashing_storage.m' to store estimator list for each network;
-3. Run 'pairwise_similarity_matrix.m' to generate a pairwise similarity matrix.
+Output:  [Meijia, please fill this]
+
+Usage:
+
+<ol>
+  <li> [Run hashing ......]
+  <li> [Run fast test ......]
+  <li> []
+</ol>
+
+<h2>Data example</h2>
+Please check out 'main.m' for a real-world data example.
+
