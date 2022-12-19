@@ -15,9 +15,9 @@ https://arxiv.org/pdf/2208.07573.pdf
 3. 'Motif.m'
 
 <h2>main file list</h2>
-1. main.m
-2. hashing_storage.m
-3. pairwise_similarity_matrix.m
+1. 'main.m'
+2. 'hashing_storage.m'
+3. 'pairwise_similarity_matrix.m'
 
 
 <h2>Instructions for making basic network two-sample test</h2>
