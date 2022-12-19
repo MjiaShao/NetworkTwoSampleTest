@@ -17,7 +17,7 @@ https://arxiv.org/pdf/2208.07573.pdf
 <h2>How to use (comparing K networks, K>=2)</h2>
 
 Input: 
-1. data set: Save each network ajacency matrix as one file in a big folder. (In our example, we saved them in the 'data_simulation_100')
+1. data set: Save each network adjacency matrix as one file in a big folder. (In our example, we saved them in the 'data_simulation_100')
 2. MotifName: a motif list including all kinds of network moments you would like to make comparison 
 3. conf_level: alpha 
 4. cdelta: the parameter determines the variance of artificial noise term \delta_T
