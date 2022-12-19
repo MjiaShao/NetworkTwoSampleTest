@@ -1,12 +1,21 @@
+% Input 
+%% Files: the folder you saved hashing information of each
+%% conf_level: alpha
+%% cdelta: the parameter determines the variance of artificial noise term \delta_T
+%% MotifName: a list of network moments you would like to test
+
+% Output
+%% p_all: similarity matrix with pairwise comparison between networks in the data set
+
 Files = dir("./hash_save");
+cdelta = 0.01;
+conf_level = 0.05;
+MotifName = {'Triangle','Vshape'};
+
 isdir = [Files.isdir];
 indexf = isdir ==0;
-cdelta = 0.01;
 Filesf = Files(indexf);
-MotifName = {'Triangle','Vshape'};
 p_all = zeros(length(Filesf),length(Filesf));
-pesti = zeros(length(Filesf),length(Filesf));
-conf_level = 0.05;
 for i = 1:length(Filesf)
     for j = i:length(Filesf)
         [p_value, conf_int] = Our_method_FastTest(strcat(Filesf(i).folder,'/',Filesf(i).name), strcat(Filesf(j).folder,'/',Filesf(j).name), conf_level,cdelta);

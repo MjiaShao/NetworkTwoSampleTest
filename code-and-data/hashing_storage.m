@@ -1,4 +1,11 @@
 clear
+% Input
+%% MotifName: a list of network moments you would like to test
+%% Files: the folder where you save all network adjacency matrices (In our example, it is 'data_simulation_100')
+
+% Output: a folder include a list of files where each file includes all hashing information of one network (In our example, it is 'hash_save')
+
+
 MotifName   = {'Triangle','Vshape'};
 mkdir(strcat("./hash_save"));
 Files = dir("./data_simulation_100");
