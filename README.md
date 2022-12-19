@@ -25,6 +25,6 @@ https://arxiv.org/pdf/2208.07573.pdf
 
 <h2>Instruction for making pairwise comparison after geting a list of network adjacency matrices</h2>
 
-1. The data example stored in the folder as 'coding/data_simulation_100' (including 100 differnt netork adjacency matrices)
+1. The data example stored in the folder as 'coding/data_simulation_100' (including 100 different netork adjacency matrices)
 2. Run 'hashing_storage.m' to store estimator list for each network;
-3. Run 'pairwise_similarity_matrix.m' to generate the similarity matrix using P-value of pairwise network two-sample test.
+3. Run 'pairwise_similarity_matrix.m' to generate a pairwise similarity matrix.
