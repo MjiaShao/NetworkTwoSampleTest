@@ -14,7 +14,7 @@ for j = 1:length(Filesf)
 end
 
 
-% Testing step: to construct network two-sample test based on the hashing information
+% Testing step: to construct pairwise network two-sample test based on the hashing information
 clear
 Files = dir("./hash_save");
 cdelta = 0.01;
