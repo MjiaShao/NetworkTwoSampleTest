@@ -13,8 +13,6 @@ https://arxiv.org/pdf/2208.07573.pdf
 1. 'NetworkHashing.m'
 2. 'FastTwoSampleTest.m'
 
-<h2>Network Two-sample test between two network</h2>
-Please check out 'demo.m'.
 
 <h2>How to use (comparing K networks, K>=2)</h2>
 
@@ -31,6 +29,11 @@ Please check out 'demo.m'.
 
 
 
+
+<h2>Demo: </h2>
+
+=======================
+
 Input: 
 1. data set: Save each network adjacency matrix as one file in a big folder. (In our example, we saved them in the 'data_simulation_100')
 2. MotifName: a motif list including all kinds of network moments you would like to make comparison 
@@ -44,4 +47,4 @@ Usage with a data example including 100 network saved in 'data_simulation_100':
 
 
 
-<h2>Demo: 
+
