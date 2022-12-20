@@ -17,11 +17,11 @@ https://arxiv.org/pdf/2208.07573.pdf
 <h2>How to use for network two-sample test </h2>
 
 <ol>
-  <li>  set up motif list you would like to test for <br />
+  <li>  Set up motif list you would like to test for <br />
   
         MotifNameList  = {'Triangle','Vshape'};
  
- <li>  apply 'NetworkHashing.m' function on network A to accomplish hashing step <br />
+ <li>  Apply 'NetworkHashing.m' function on network A to accomplish hashing step <br />
 
         [NetStatList] = NetworkHashing(A, MotifNameList, FileName)
     
@@ -35,9 +35,9 @@ https://arxiv.org/pdf/2208.07573.pdf
   
   1. NetStatList: all summary statistic needed for test of network A.
   
-  <li> apply 'NetworkHashing.m' function on network B similarly <br />
+  <li> Apply 'NetworkHashing.m' function on network B similarly <br />
   
-  <li> apply 'FastTwoSampleTest.m' function to accomplish testing step  <br />
+  <li> Apply 'FastTwoSampleTest.m' function to accomplish testing step  <br />
 
         [p_value, conf_int] = FastTwoSampleTest(FileName1, FileName2, conf_level,cdelta)
     
