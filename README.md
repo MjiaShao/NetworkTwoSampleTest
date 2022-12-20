@@ -22,9 +22,10 @@ https://arxiv.org/pdf/2208.07573.pdf
         [NetStatList] = NetworkHashing(A, MotifNameList, FileName)
     
   Input:
-    1. A: Network adjacency matrix (requires symmetry with all diagnal elements equal to 0);
-    2. MotifNameList: a list of network moments you would like to test;
-    3. FileName: the name of place where you would like save the results.
+    
+  1. A: Network adjacency matrix (requires symmetry with all diagnal elements equal to 0);
+  2. MotifNameList: a list of network moments you would like to test;
+  3. FileName: the name of place where you would like save the results.
 
   Output: all summary statistic needed for test of network A.
   
@@ -34,14 +35,16 @@ https://arxiv.org/pdf/2208.07573.pdf
         [p_value, conf_int] = FastTwoSampleTest(FileName1, FileName2, conf_level,cdelta)
     
   Input:
-    1. FileName1: the place where you saved summary statistics of network A;
-    2. FileName2: the place where you saved summary statistics of network B;
-    3. conf_level: $\alpha$
-    4. cdelta: the parameter influences the variance of artificial noise term $\delta_T$
+    
+  1. FileName1: the place where you saved summary statistics of network A;
+  2. FileName2: the place where you saved summary statistics of network B;
+  3. conf_level: $\alpha$
+  4. cdelta: the parameter influences the variance of artificial noise term $\delta_T$
 
   Output:
-    1. p_value: P-value of network two-sample test;
-    2. conf_int: $(1-\alpha)\times100$\% confidence interval.
+
+  1. p_value: P-value of network two-sample test;
+  2. conf_int: $(1-\alpha)\times100$\% confidence interval.
     
 </ol>
 
