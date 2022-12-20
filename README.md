@@ -31,7 +31,9 @@ https://arxiv.org/pdf/2208.07573.pdf
   2. MotifNameList: a list of network moments you would like to test;
   3. FileName: the name of place where you would like save the results.
 
-  Output: all summary statistic needed for test of network A.
+  Output: 
+  
+  1. NetStatList: all summary statistic needed for test of network A.
   
   <li> apply 'NetworkHashing.m' function on network B similarly <br />
   
