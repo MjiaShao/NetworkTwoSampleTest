@@ -1,4 +1,4 @@
-function [p_value, conf_int] = Our_method_FastTest(FileName1, FileName2, conf_level,cdelta)
+function [p_value, conf_int] = FastTwoSampleTest(FileName1, FileName2, conf_level,cdelta)
 	
 	StdNormal = makedist('normal', 'mu', 0, 'sigma', 1);
 

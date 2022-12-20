@@ -1,4 +1,4 @@
-function [NetStatList] = Our_method_NetHashing(A, MotifNameList, FileName)
+function [NetStatList] = NetworkHashing(A, MotifNameList, FileName)
 	
 	
 	NetStatList = {};
