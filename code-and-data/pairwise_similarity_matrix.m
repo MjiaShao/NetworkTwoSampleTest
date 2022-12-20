@@ -1,3 +1,4 @@
+clear
 % Input 
 %% Files: the folder you saved hashing information of each
 %% conf_level: alpha

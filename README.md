@@ -13,6 +13,8 @@ https://arxiv.org/pdf/2208.07573.pdf
 1. 'Our_method_NetHashing.m'
 2. 'Our_method_FastTest.m'
 
+<h2>Network Two-sample test between two network</h2>
+Please check out 'demo.m'.
 
 <h2>How to use (comparing K networks, K>=2)</h2>
 
@@ -33,6 +35,4 @@ Usage with a data example including 100 network saved in 'data_simulation_100':
   <li> (In order to change the data set, you can change the folder 'data_simulation_100' to your own) 
 </ol>
 
-<h2>Network Two-sample test between two network</h2>
-Please check out 'main.m'.
 
