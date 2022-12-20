@@ -18,11 +18,19 @@ https://arxiv.org/pdf/2208.07573.pdf
 
 <ol>
   <li> Step 1: run 'hashing_storage.m' to accomplish hashing step <br />
+    .. code-block:: matlab
+
+        [NetStatList] = NetworkHashing(A, MotifNameList, FileName)
+    
   Input:......
   Output:......
   
   
   <li> Step 2: run 'pairwise_similarity_matrix.m' to accomplish testing step  <br />
+      .. code-block:: matlab
+
+        [p_value, conf_int] = FastTwoSampleTest(FileName1, FileName2, conf_level,cdelta)
+    
   Input:......
   Output:......
 </ol>
