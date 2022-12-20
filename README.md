@@ -58,7 +58,7 @@ https://arxiv.org/pdf/2208.07573.pdf
 
 <h2> Application </h2>
    <li>  Example1: application on test with two network. (see 'example1.m')
-   <li>  Example2: application on getting similarity matrix with multiple network. (see 'example2.m')
+   <li>  Example2: application on getting similarity matrix with multiple networks. (see 'example2.m')
 
 
 
