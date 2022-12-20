@@ -17,7 +17,7 @@ https://arxiv.org/pdf/2208.07573.pdf
 <h2>How to use for network two-sample test </h2>
 
 <ol>
-  <li> Step 1: apply 'NetworkHashing.m' function to accomplish hashing step <br />
+  <li>  apply 'NetworkHashing.m' function to accomplish hashing step <br />
 
         [NetStatList] = NetworkHashing(A, MotifNameList, FileName)
     
@@ -30,7 +30,7 @@ https://arxiv.org/pdf/2208.07573.pdf
   Output: all summary statistic needed for test of network A.
   
   
-  <li> Step 2: apply 'FastTwoSampleTest.m' function to accomplish testing step  <br />
+  <li> apply 'FastTwoSampleTest.m' function to accomplish testing step  <br />
 
         [p_value, conf_int] = FastTwoSampleTest(FileName1, FileName2, conf_level,cdelta)
     
@@ -51,9 +51,9 @@ https://arxiv.org/pdf/2208.07573.pdf
 
 
 
-<h2>Example1: application on test with two network </h2>
-
-<h2>Example2: application on getting similarity matrix with multiple network </h2>
+<h2> Application </h2>
+   <li>  Example1: application on test with two network. (see 'example1.m')
+   <li>  Example2: application on getting similarity matrix with multiple network. (see 'example2.m')
 
 
 
