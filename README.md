@@ -39,7 +39,7 @@ https://arxiv.org/pdf/2208.07573.pdf
   1. FileName1: the place where you saved summary statistics of network A;
   2. FileName2: the place where you saved summary statistics of network B;
   3. conf_level: $\alpha$
-  4. cdelta: the parameter influences the variance of artificial noise term $\delta_T$
+  4. cdelta: the parameter which influences the variance of artificial noise term $\delta_T$
 
   Output:
 
