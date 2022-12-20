@@ -1,4 +1,4 @@
-%% Hashing step: to store a list of needed estimator of each network
+% Hashing step: to store a list of needed estimator of each network
 clear
 MotifName   = {'Triangle','Vshape'};
 mkdir(strcat("./hash_save"));
@@ -14,7 +14,7 @@ for j = 1:length(Filesf)
 end
 
 
-%% Testing step: to construct network two-sample test based on the hashing information
+% Testing step: to construct network two-sample test based on the hashing information
 clear
 Files = dir("./hash_save");
 cdelta = 0.01;
