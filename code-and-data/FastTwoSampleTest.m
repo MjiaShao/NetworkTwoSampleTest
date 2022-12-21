@@ -1,9 +1,6 @@
-function [p_value, conf_int] = FastTwoSampleTest(FileName1, FileName2, conf_level,cdelta)
+function [p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, conf_level,cdelta)
 	
 	StdNormal = makedist('normal', 'mu', 0, 'sigma', 1);
-
-	load(FileName1);  NetStatList1 = NetStatList;
-	load(FileName2);  NetStatList2 = NetStatList;
 	
 	mList = length(NetStatList1);
 	nList = length(NetStatList2);

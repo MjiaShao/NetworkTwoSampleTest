@@ -1,4 +1,4 @@
-function [NetStatList] = NetworkHashing(A, MotifNameList, FileName)
+function [NetStatList] = NetworkHashing(A, MotifNameList)
 	
 	
 	NetStatList = {};
@@ -70,7 +70,6 @@ function [NetStatList] = NetworkHashing(A, MotifNameList, FileName)
 	
 	end
 	
-	save(FileName, 'NetStatList');
 	
 	
 end
