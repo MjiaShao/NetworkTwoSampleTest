@@ -40,8 +40,8 @@ https://arxiv.org/pdf/2208.07573.pdf
         [p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, conf_level,cdelta)
     
   Input:
-  1. NetStatList1: the output in the step 2;
-  2. NetStatList2: the output in the step 3;
+  1. NetStatList1: the output in step 2;
+  2. NetStatList2: the output in step 3;
   3. conf_level: $\alpha$
   4. cdelta: the parameter which influences the variance of artificial noise term $\delta_T$
 
