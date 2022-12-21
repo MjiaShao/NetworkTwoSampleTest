@@ -61,7 +61,7 @@ https://arxiv.org/pdf/2208.07573.pdf
      <li> conf_int: $(1-\alpha)\times100$% confidence interval.
   </ul>
   
-  If MotifNameList contains K members, then FastTwoSampleTest will output a length-K p-value vector, and conf_int will be a K by 2 matrix, each row showing the confidence interval for the corresponding motif.
+  If <em>MotifNameList</em> contains K members, then FastTwoSampleTest will output a length-K p-value vector, and <em>conf_int</em> will be a K by 2 matrix, each row showing the confidence interval for the corresponding motif.
     
 </ol>
 
