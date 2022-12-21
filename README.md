@@ -17,11 +17,15 @@ https://arxiv.org/pdf/2208.07573.pdf
 <h2>How to use for network two-sample test </h2>
 
 <ol>
-<li>  Set up motif list you would like to test for <br />
+<li>  Set up motif list you would like to test for 
+  
+  <br>
   
         MotifNameList  = {'Triangle','Vshape'};
  
-<li>  Apply 'NetworkHashing.m' function on network A to accomplish hashing step <br />
+<li>  Apply 'NetworkHashing.m' function on network A to accomplish hashing step 
+  
+  <br>
 
         [NetStatList] = NetworkHashing(A, MotifNameList)
   Input:
@@ -39,7 +43,7 @@ https://arxiv.org/pdf/2208.07573.pdf
   
 <li> Apply 'NetworkHashing.m' function to hash network B. <br >
   
-<li> Apply 'FastTwoSampleTest.m' function to compare networks A and B, using only their network hashing outputs <br />
+<li> Apply 'FastTwoSampleTest.m' function to compare networks A and B, using only their network hashing outputs <br>
 
         [p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, conf_level,cdelta)
     
@@ -54,7 +58,7 @@ https://arxiv.org/pdf/2208.07573.pdf
   Output:
   <ul>
      <li> p_value: P-value of network two-sample test;
-     <li> conf_int: $(1-\alpha)\times100$\% confidence interval.
+     <li> conf_int: $(1-\alpha)\times100$% confidence interval.
   </ul>
     
 </ol>
