@@ -3,7 +3,7 @@ function output = Motif(A, xi1, MotifName)
 	% Input: 
 	% A: adjacency matrix
 	% xi1: 0 compute U-hat; 1: compute G_1-hat; 2: compute G_2-hat
-	% MotifName: 'Edge', 'Triangle', 'Vshape'
+	% MotifName: 'Edge', 'Triangle', 'Vshape', 'ThreeStar'
 	% output:
 	% corresponding xi1 results
 	
