@@ -25,11 +25,15 @@ https://arxiv.org/pdf/2208.07573.pdf
 
         [NetStatList] = NetworkHashing(A, MotifNameList)
   Input:
-  1. A: Network adjacency matrix (requires symmetry with all diagnal elements equal to 0);
-  2. MotifNameList: a list of network moments you would like to test;
+  <ul>
+    <li> A: Network adjacency matrix (requires symmetry with all diagnal elements equal to 0);
+     <li> MotifNameList: a list of network moments you would like to test;
+  </ul>
   
   Output: 
-  1. NetStatList: all summary statistic needed for test of network A. <br />
+  <ul>
+     <li> NetStatList: all summary statistic needed for test of network A.
+  </ul>
   
   <br>
   
@@ -40,14 +44,18 @@ https://arxiv.org/pdf/2208.07573.pdf
         [p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, conf_level,cdelta)
     
   Input:
-  1. NetStatList1: the output in step 2;
-  2. NetStatList2: the output in step 3;
-  3. conf_level: $\alpha$
-  4. cdelta tunes the amount of artificial smoothing added to the studentization form (see our paper for more details).  You can set it to 0 or a small positive number in most cases.
+  <ul>
+     <li> NetStatList1: output of step 2;
+     <li> NetStatList2: output of step 3;
+     <li> conf_level: $\alpha$
+     <li> cdelta tunes the amount of artificial smoothing added to the studentization form (see our paper for more details).  You can set it to 0 or a small positive number in most cases.
+  </ul>
 
   Output:
-  1. p_value: P-value of network two-sample test;
-  2. conf_int: $(1-\alpha)\times100$\% confidence interval.
+  <ul>
+     <li> p_value: P-value of network two-sample test;
+     <li> conf_int: $(1-\alpha)\times100$\% confidence interval.
+  </ul>
     
 </ol>
 
