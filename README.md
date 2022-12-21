@@ -43,7 +43,7 @@ https://arxiv.org/pdf/2208.07573.pdf
   1. NetStatList1: the output in step 2;
   2. NetStatList2: the output in step 3;
   3. conf_level: $\alpha$
-  4. cdelta: the parameter which influences the variance of artificial noise term $\delta_T$
+  4. cdelta tunes the amount of artificial smoothing added to the studentization form (see our paper for more details).  You can set it to 0 or a small positive number in most cases.
 
   Output:
   1. p_value: P-value of network two-sample test;
