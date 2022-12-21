@@ -21,7 +21,7 @@ https://arxiv.org/pdf/2208.07573.pdf
   
   <br>
   
-        MotifNameList  = {'Triangle','Vshape'};
+        MotifNameList   = {'Triangle','Vshape','ThreeStar'};
  
 <li>  Apply 'NetworkHashing.m' function on network A to accomplish hashing step 
   
