@@ -23,11 +23,10 @@ https://arxiv.org/pdf/2208.07573.pdf
  
 <li>  Apply 'NetworkHashing.m' function on network A to accomplish hashing step <br />
 
-        [NetStatList] = NetworkHashing(A, MotifNameList, FileName)
+        [NetStatList] = NetworkHashing(A, MotifNameList)
   Input:
   1. A: Network adjacency matrix (requires symmetry with all diagnal elements equal to 0);
   2. MotifNameList: a list of network moments you would like to test;
-  3. FileName: the name of place where you would like save the results.
   
   Output: 
   1. NetStatList: all summary statistic needed for test of network A. <br />
@@ -38,11 +37,11 @@ https://arxiv.org/pdf/2208.07573.pdf
   
 <li> Apply 'FastTwoSampleTest.m' function to compare networks A and B, using only their network hashing outputs <br />
 
-        [p_value, conf_int] = FastTwoSampleTest(FileName1, FileName2, conf_level,cdelta)
+        [p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, conf_level,cdelta)
     
   Input:
-  1. FileName1: the place where you saved summary statistics of network A;
-  2. FileName2: the place where you saved summary statistics of network B;
+  1. NetStatList1: the output in the step 2;
+  2. NetStatList2: the output in the step 3;
   3. conf_level: $\alpha$
   4. cdelta: the parameter which influences the variance of artificial noise term $\delta_T$
 
