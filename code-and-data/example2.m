@@ -9,7 +9,7 @@ NetStatList_all = cell(1,length(Filesf));
 for j = 1:length(Filesf)
     A = load(strcat("./data/",Filesf(j).name));
     A = cell2mat(struct2cell(A));
-    NetStatList_all{j} =NetworkHashing(A, MotifNameList );
+    NetStatList_all{j} =NetworkHashing(A, MotifNameList);
 end
 
 
