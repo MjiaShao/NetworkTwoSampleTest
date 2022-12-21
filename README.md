@@ -45,13 +45,13 @@ https://arxiv.org/pdf/2208.07573.pdf
   
 <li> Apply 'FastTwoSampleTest.m' function to compare networks A and B, using only their network hashing outputs <br>
 
-        [p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, conf_level,cdelta)
+        [p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, sig_level, cdelta)
     
   Input:
   <ul>
      <li> NetStatList1: output of step 2;
      <li> NetStatList2: output of step 3;
-     <li> conf_level: $\alpha$
+     <li> sig_level: $\alpha$
      <li> cdelta tunes the amount of artificial smoothing added to the studentization form (see our paper for more details).  You can set it to 0 or a small positive number in most cases.
   </ul>
 
