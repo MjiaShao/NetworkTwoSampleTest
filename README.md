@@ -17,39 +17,36 @@ https://arxiv.org/pdf/2208.07573.pdf
 <h2>How to use for network two-sample test </h2>
 
 <ol>
-  <li>  Set up motif list you would like to test for <br />
+<li>  Set up motif list you would like to test for <br />
   
         MotifNameList  = {'Triangle','Vshape'};
  
- <li>  Apply 'NetworkHashing.m' function on network A to accomplish hashing step <br />
+<li>  Apply 'NetworkHashing.m' function on network A to accomplish hashing step <br />
 
         [NetStatList] = NetworkHashing(A, MotifNameList, FileName)
-    
   Input:
-    
   1. A: Network adjacency matrix (requires symmetry with all diagnal elements equal to 0);
   2. MotifNameList: a list of network moments you would like to test;
   3. FileName: the name of place where you would like save the results.
-
+  
   Output: 
+  1. NetStatList: all summary statistic needed for test of network A. <br />
   
-  1. NetStatList: all summary statistic needed for test of network A.
+  <br>
   
-  <li> Apply 'NetworkHashing.m' function on network B similarly <br />
+<li> Apply 'NetworkHashing.m' function to hash network B. <br >
   
-  <li> Apply 'FastTwoSampleTest.m' function to accomplish testing step  <br />
+<li> Apply 'FastTwoSampleTest.m' function to compare networks A and B, using only their network hashing outputs <br />
 
         [p_value, conf_int] = FastTwoSampleTest(FileName1, FileName2, conf_level,cdelta)
     
   Input:
-    
   1. FileName1: the place where you saved summary statistics of network A;
   2. FileName2: the place where you saved summary statistics of network B;
   3. conf_level: $\alpha$
   4. cdelta: the parameter which influences the variance of artificial noise term $\delta_T$
 
   Output:
-
   1. p_value: P-value of network two-sample test;
   2. conf_int: $(1-\alpha)\times100$\% confidence interval.
     
