@@ -62,9 +62,9 @@ https://arxiv.org/pdf/2208.07573.pdf
 
 
 
-<h2> Application </h2>
-   <li>  Example1: application on test with two network. (see 'example1.m')
-   <li>  Example2: application on getting similarity matrix with multiple networks. (see 'example2.m')
+<h2> Example implementations </h2>
+   <li>  Example1: comparing two network. (see 'example1.m')
+   <li>  Example2: obtaining a similarity matrix between multiple networks using pairwise tests. (see 'example2.m')
 
 
 
