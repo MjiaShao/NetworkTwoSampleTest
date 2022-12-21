@@ -7,7 +7,7 @@ A1 = A1.A;
 A2 = A2.A;
 
 % set up a MotifName list 
-MotifNameList   = {'Triangle','Vshape'};
+MotifNameList   = {'Triangle','Vshape','ThreeStar'};
 
 % Hashing step: to store a list of needed estimator of each network
 NetStatList1 = NetworkHashing(A1, MotifNameList);
@@ -17,8 +17,8 @@ NetStatList2 = NetworkHashing(A2, MotifNameList);
 
 
 % Testing step: to construct network two-sample test based on the hashing information
-conf_level = 0.05;
+sig_level = 0.05;
 cdelta = 0.01;
-[p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, conf_level,cdelta);
+[p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, sig_level,cdelta);
 p_value
 conf_int

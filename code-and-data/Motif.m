@@ -87,31 +87,64 @@ function output = Motif(A, xi1, MotifName)
 				output = z;
 		end
 	case 'ThreeStar'
-		switch(xi1)
-			case 0
-				vv = sum(A,1);
-				x  = mean(vv.*(vv-1).*(vv-2)/6);
-                output = x;
-			case 1
-				vv = sum(A,1);
-				y  = ( vv.*(vv-1).*(vv-2)/6 + ((vv-1).*(vv-2)/2)*A ) / ((n-1)*(n-2)*(n-3)/6);
-				x  = mean(y);
-				y  = y - x;
-                output = y;
-			case 2
-				vv = sum(A,1);
-				VS = ones(n,1) * ((vv-1).*(vv-2)/2);
-				VD = diag(vv);
-				z  = (A.*(VS+VS') + A*VD*A - (A.^2)*A - A*(A.^2) ) / ((n-2)*(n-3)/2);
-				z  = z - diag(diag(z));
-				y  = sum(z,1) / (n-1);
-				y  = y(:)';
-				x  = mean(y);
-				y  = y - x;
-				yy = ones(n,1)*y;
-				z  = z - yy - yy' - x;
-				z  = z - diag(diag(z));
-				output = z;
+	    switch(xi1)
+		    case 0
+			    vv  = sum(A,1);
+			    vv2 = sum(A.^2,1);
+			    vv3 = sum(A.^3,1);
+			    x   = sum(vv.^3 - 3*vv2.*vv + 2*vv3)/6 / (n*(n-1)*(n-2)*(n-3)/24);
+			    output = x;
+		    case 1
+			    vv = sum(A,1);
+			    vv2 = sum(A.^2,1);
+			    vv3 = sum(A.^3,1);
+			    y  = zeros(n,1);
+			    for(i = 1:n)
+				    y(i) = ( vv(i).^3 - 3*vv2(i).*vv(i) + 2*vv3(i) )/6 ...
+						    + sum( A(i,:) .* ( (vv-A(i,:)).^2 - vv2 + A(i,:).^2 )/2 );
+			    end
+			    y  = y / ((n-1)*(n-2)*(n-3)/6);
+			    x  = mean(y);
+			    y  = y - x;
+			    output = y';
+		    case 2
+			    vv  = sum(A,1);
+			    vv2 = sum(A.^2,1);
+			    vmat = vv(:) * ones(1,n);
+			    vmat2 = vv2(:) * ones(1,n);
+			    
+			    z = A.*...
+				    (...
+					    (...
+						    (vmat - A).^2 ...
+						    - vmat2...
+						    + A.^2 ...
+					    )/2 ...
+					    +...
+					    (...
+						    (vmat'-A).^2 ...
+						    - vmat2'...
+						    + A.^2 ...
+					    )/2 ...
+				    )...
+				    +...
+				    (...
+					    A * diag(vv) * A...
+					    - A.^2 * A...
+					    - A * (A.^2)...
+				    );
+			    
+			    z  = z - diag(diag(z));
+			    
+			    z  = z/((n-2)*(n-3)/2);
+			    y  = sum(z,1) / (n-1);
+			    y  = y(:)';
+			    x  = mean(y);
+			    y  = y - x;
+			    yy = ones(n,1)*y;
+			    z  = z - yy - yy' - x;
+			    z  = z - diag(diag(z));
+			    output = z;
 	    end
 	end % end switch
 	

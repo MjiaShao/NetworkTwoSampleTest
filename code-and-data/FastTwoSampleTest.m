@@ -1,4 +1,4 @@
-function [p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, conf_level,cdelta)
+function [p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, sig_level, cdelta)
 	
 	StdNormal = makedist('normal', 'mu', 0, 'sigma', 1);
 	
@@ -73,7 +73,7 @@ function [p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, con
 		
 		p_value(count_index) = 2*min(GT, 1-GT);
 		
-		alpha = conf_level;
+		alpha = sig_level;
         D_mn = rho_A^(-s)*U - rho_B^(-s)*V;
         q_l = norminv(1-alpha/2) + I_0 +Q1+Q2*(norminv(1-alpha/2)^2-1 );
         q_u = norminv(alpha/2) + I_0 +Q1+Q2*(norminv(alpha/2)^2-1);
