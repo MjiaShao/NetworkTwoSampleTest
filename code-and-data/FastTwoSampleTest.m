@@ -64,7 +64,7 @@ function [p_value, conf_int] = FastTwoSampleTest(NetStatList1, NetStatList2, sig
 					( temp2.aa13 + temp2.aa41 )...
 				);
 		
-		smooth = randn(1)*sqrt(cdelta*(log(m)*m^(-1/2)+log(n)*n^(-1/2)));
+		smooth = randn(1)*sqrt(cdelta*(log(m)*m^(-1)+log(n)*n^(-1)));
 		T_hat = (rho_A^(-s)*U - rho_B^(-s)*V)/smn+smooth;
 		
 		GT = cdf(StdNormal, T_hat) - pdf(StdNormal, T_hat) * ( Q1 + Q2*((T_hat).^2 - 1)+I_0 );
